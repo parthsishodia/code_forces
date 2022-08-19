@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Watermelon 
+{
+    public static void main(String args[]) 
+    {
+        int wei;
+        Scanner Sc = new Scanner(System.in);
+        wei=Sc.nextInt();
+        if(wei>2)
+        {
+        if((wei%2)==0)
+            System.out.println("YES");
+        else
+            System.out.println("NO");
+        }
+        else
+            System.out.println("NO");
+    }
+}
