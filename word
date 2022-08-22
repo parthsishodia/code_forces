@@ -1,0 +1,30 @@
+import java.util.Scanner;
+ 
+public class sol {
+    public static void main(String[] args) {
+        Scanner Sc =new Scanner(System.in);
+        String word =Sc.next();
+        int upper=0;
+        int lower=0;
+        for(int i=0;i<word.length();i++)
+        {
+            char ch = word.charAt(i);
+            if(ch>='A' && ch<='Z')
+            {
+                upper++;
+            }
+            else if(ch>='a' && ch<='z')
+            {
+                lower++;
+            }
+        }
+            if(upper>lower)
+            {
+                System.out.print(word.toUpperCase());
+            }
+            else  {
+                System.out.print(word.toLowerCase());
+            }
+            
+        }
+    }
