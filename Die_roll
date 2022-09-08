@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+
+public class Main
+{
+
+    public static void main(String[] args) 
+    {
+        Scanner in=new Scanner(System.in);
+        int y=in.nextInt();
+        int w=in.nextInt();
+        int d=Math.max(y, w);
+        d=(6-d)+1;
+        int denom=6;
+        int value=toMixedFraction(d,denom);
+        d=d/value;
+        denom=denom/value;
+        System.out.println(d+"/"+denom);
+        in.close();
+
+    }
+    public static int toMixedFraction(int x,int y) 
+    {
+        if(y==0)
+            return x;
+        return toMixedFraction(y,x%y);
+    }
+    }
