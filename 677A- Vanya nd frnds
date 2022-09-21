@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner Sc=new Scanner(System.in);
+		int n=Sc.nextInt();
+		int h=Sc.nextInt();
+		int count=0;
+		while(n--!=0)
+		{
+		   int i=Sc.nextInt();
+		    if(i>h)
+		    {
+		        count=count+2;
+		    }
+		    else{
+		        count=count+1;
+		    }
+		    
+		}
+		System.out.print(count);
+		
+		
+	}
+}
