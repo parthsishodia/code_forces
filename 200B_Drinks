@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner Sc=new Scanner(System.in);
+		int n=Sc.nextInt();
+		 double sum=0;
+		 double answer;
+
+		for(int i=0;i<n;i++)
+		 {
+		     int value=Sc.nextInt();
+		     sum=sum+value;
+		     
+		 }
+		 answer=sum/n;
+		 System.out.print(answer);
+	
+	
+	}
+}
