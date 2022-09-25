@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner Sc =new Scanner(System.in);
+		int n=Sc.nextInt();
+		int arr[]=new int[n+1];
+		 int count=0;
+		int q;
+		int level;
+	 int p=Sc.nextInt();
+		for(int i=0;i<p;i++)
+		{
+		    level=Sc.nextInt();
+		    arr[level]=1;
+		}
+		q=Sc.nextInt();
+		for(int i=0;i<q;i++)
+		{
+		    level=Sc.nextInt();
+		    arr[level]=1;
+		}
+		for(int i=0;i<=n;i++)
+		{
+		    if(arr[i]==0)
+		    {
+		        count++;
+		    }
+	
+		}
+		if(count==1)
+		{
+		    System.out.print( "I become the guy." );
+		}
+		else
+		{
+		    System.out.print("Oh, my keyboard!");
+		}
+		 
+	}
+}
