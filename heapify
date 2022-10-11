@@ -1,0 +1,51 @@
+
+import java.util.Scanner;
+public class heapsort
+{
+    public void  sort(int arr[])
+    {   int n= arr.length;
+        for(int i=n/2-1;i>=0;i--)
+          heapify(arr,n,i);
+         for(int i=n-1;i>=0;i--)
+         {
+            int temp =arr[0];
+            arr[0]=arr[i];
+            arr[i]=temp;
+
+            heapify(arr,i,0);
+         }
+    }
+    void heapify(int arr[],int n,int i)
+    {
+     int lar =i;
+     int l=2*i+1;
+     int r=2*i+2;
+     if(l<n && arr[l]>arr[lar])
+        lar=l;
+     if(r<n && arr[r]>arr[lar])
+        lar=r;
+     if(lar!=i)
+     {
+        int swap =arr[i];
+        arr[i]=arr[lar];
+        arr[lar]=swap;
+        heapify(arr, n, lar);
+     }
+    }
+    public static void main(String[] args) {
+        Scanner Sc=new Scanner(System.in);
+        int n=Sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=Sc.nextInt();
+        }
+        heapsort obj =new heapsort();
+        obj.sort(arr);
+        System.out.println("Sorted arrays are:");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]+ " ");
+        }
+    }
+}
